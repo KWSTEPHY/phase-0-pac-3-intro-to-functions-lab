@@ -1,19 +1,27 @@
 require ( './root.js' );
 
 
-describe('shout(string)', function() {
-  it('receives one argument and returns it in all caps', function() {
-    expect(shout('hello')).toEqual('HELLO');
-  })
+describe('shout(string)', function shout(string) {
+  return string;
 })
 
-describe('whisper(string)', function() {
+
+  it("receives one argument and returns it in all caps", function () {
+    expect(shout("hello")).toEqual("HELLO");
+  });
+
+
+describe('whisper(string)', function whisper(string) {
+  return string;
+})
+
   it('receives one argument and returns it in all lowercase', function() {
     expect(whisper('HELLO')).toEqual('hello');
-  })
-})
+  });
 
-describe('logShout(string)', function() {
+
+describe('logShout(string)', function logshout(string) {
+  console.log(string);
   it('takes a string argument and logs it in all caps using console.log()', function() {
     const spy = expect.spyOn(console, 'log').andCallThrough();
 
@@ -25,7 +33,8 @@ describe('logShout(string)', function() {
   })
 })
 
-describe('logWhisper(string)', function() {
+describe('logWhisper(string)', function logwhisper(string) {
+  console.log(string);
   it('takes a string argument and logs it in all lowercase using console.log()', function() {
     const spy = expect.spyOn(console, 'log').andCallThrough();
 
@@ -37,7 +46,8 @@ describe('logWhisper(string)', function() {
   })
 })
 
-describe('sayHiToHeadphonedRoommate(string)', function() {
+describe('sayHiToHeadphonedRoommate(string)', function sayHiToHeadPhonedRoommate(string) {
+
   it('returns "I can\'t hear you!" if `string` is lowercase', function() {
     expect(sayHiToHeadphonedRoommate('hello')).toEqual("I can't hear you!");
   })
